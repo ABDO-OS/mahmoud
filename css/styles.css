@@ -31,6 +31,7 @@ body {
   font-family: var(--sans);
   line-height: 1.65;
   letter-spacing: 0;
+  overflow-x: hidden;
 }
 
 img {
@@ -147,7 +148,7 @@ a {
 
 .hero h1 {
   margin: 10px 0 18px;
-  font-size: clamp(3.8rem, 12vw, 7.8rem);
+  font-size: clamp(3rem, 12vw, 7.8rem);
   line-height: 0.94;
   font-weight: 900;
 }
@@ -605,9 +606,11 @@ a {
 
   .nav-links {
     width: 100%;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 8px;
-    font-size: 0.78rem;
+    font-size: 0.74rem;
+    text-align: center;
   }
 
   .hero {
@@ -649,6 +652,18 @@ a {
 @media (max-width: 520px) {
   .section-shell {
     width: min(100% - 28px, 1120px);
+  }
+
+  .site-header {
+    padding-inline: 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.75rem, 14vw, 3.45rem);
+  }
+
+  .hero .eyebrow {
+    font-size: 0.8rem;
   }
 
   .hero-stats {
