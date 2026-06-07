@@ -532,6 +532,10 @@ a {
   align-items: start;
 }
 
+.contact-grid > * {
+  min-width: 0;
+}
+
 .contact-section h2 {
   margin-top: 16px;
   width: min-content;
@@ -664,6 +668,17 @@ a {
 
   .hero .eyebrow {
     font-size: 0.8rem;
+  }
+
+  .contact-section h2 {
+    width: auto;
+    max-width: 100%;
+    font-size: clamp(2.35rem, 11vw, 3.1rem);
+    overflow-wrap: anywhere;
+  }
+
+  .contact-list {
+    min-width: 0;
   }
 
   .hero-stats {
