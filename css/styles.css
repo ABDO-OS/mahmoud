@@ -174,8 +174,8 @@ a {
 }
 
 .hero-stats {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: min(610px, 100%);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(850px, 100%);
   margin: 0 auto;
 }
 
@@ -256,6 +256,15 @@ a {
 
 .about-copy p {
   margin: 0 0 26px;
+}
+
+.about-copy blockquote {
+  margin: 34px 0;
+  padding: 22px 26px;
+  border-left: 6px solid var(--green);
+  background: rgba(57, 221, 122, 0.055);
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .drivers {
@@ -403,6 +412,103 @@ a {
   color: var(--muted);
   font-style: italic;
   text-align: center;
+}
+
+.framework-section {
+  padding: 78px 0 108px;
+  color: var(--ink);
+}
+
+.framework-intro {
+  margin: 48px 0 42px;
+  color: var(--muted);
+  font-size: 1.08rem;
+  font-style: italic;
+}
+
+.track {
+  margin-top: 36px;
+}
+
+.track h3,
+.principles h3 {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0 0 22px;
+  color: var(--green);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+}
+
+.track h3::after,
+.principles h3::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(57, 221, 122, 0.28);
+}
+
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.framework-grid article {
+  min-height: 170px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  padding: 26px 18px;
+  background: rgba(57, 221, 122, 0.055);
+  border: 1px solid rgba(57, 221, 122, 0.2);
+  text-align: center;
+}
+
+.framework-grid span {
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.framework-grid h4,
+.principles h4 {
+  margin: 10px 0 8px;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+.framework-grid p,
+.principles p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.strategy-band {
+  margin: 30px 0 34px;
+  padding: 15px;
+  border: 1px solid rgba(57, 221, 122, 0.28);
+  color: var(--green);
+  font-weight: 900;
+  letter-spacing: 0.28em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.principles {
+  margin-top: 34px;
+}
+
+.principles article {
+  margin-top: 14px;
+  padding: 22px 28px;
+  background: rgba(57, 221, 122, 0.055);
+  border-left: 5px solid var(--green);
 }
 
 .project {
@@ -611,9 +717,9 @@ a {
   .nav-links {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 8px;
-    font-size: 0.74rem;
+    font-size: 0.68rem;
     text-align: center;
   }
 
@@ -624,6 +730,7 @@ a {
   .hero-stats,
   .driver-grid,
   .figure-grid,
+  .framework-grid,
   .project-columns,
   .contact-grid {
     grid-template-columns: 1fr;
@@ -648,6 +755,10 @@ a {
     letter-spacing: 0.18em;
   }
 
+  .framework-grid article {
+    min-height: 132px;
+  }
+
   .project-hero {
     padding: 58px 0 46px;
   }
@@ -660,6 +771,10 @@ a {
 
   .site-header {
     padding-inline: 14px;
+  }
+
+  .nav-links {
+    font-size: 0.62rem;
   }
 
   .hero h1 {
